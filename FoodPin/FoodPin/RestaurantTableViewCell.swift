@@ -20,4 +20,9 @@ class RestaurantTableViewCell: UITableViewCell {
         self.locationLabel.text = locationLabel
         self.nameLabel.text = nameLabel
     }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.tintColor = .systemYellow
+    }
 }

@@ -21,11 +21,11 @@ class RestaurantTableViewController: UITableViewController {
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian/ Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee &Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
     func configureDataSource() -> UITableViewDiffableDataSource<Section, String >{
-        let cellIdentifier = "datacell"
+        let cellIdentifier = "favoritecell"
         let dataSource = UITableViewDiffableDataSource<Section, String>(tableView: tableView, cellProvider: { [self]
             tableView, indexPath, restaurantName in
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
-            cell.configureCell(nameLabel: restaurantName, locationLabel: restaurantLocations[indexPath.row], typeLabel: restaurantTypes[indexPath.row], thumbnailImageView: restaurantImages[indexPath.row])
+            cell.configureCell(nameLabel: restaurantName , locationLabel: restaurantLocations[indexPath.row], typeLabel: restaurantTypes[indexPath.row], thumbnailImageView: restaurantImages[indexPath.row])
 
             return cell
         }
@@ -35,7 +35,9 @@ class RestaurantTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        tableView.separatorStyle = .none
+
         var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
         snapshot.appendSections([.all])
         snapshot.appendItems(restaurantNames, toSection: .all)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FBFC9ECC761F3E9887EDCD4 /* Pods_FoodPin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBE448AF439865DCB3E8B69 /* Pods_FoodPin.framework */; };
 		348A1F4C28005B9C00759C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A1F4B28005B9C00759C43 /* AppDelegate.swift */; };
 		348A1F4E28005B9C00759C43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A1F4D28005B9C00759C43 /* SceneDelegate.swift */; };
 		348A1F5328005B9C00759C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348A1F5128005B9C00759C43 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		348A1F5928005B9F00759C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		348A1F5F28005E8700759C43 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		34BF523B2806C9C3008DC13A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		3BBE448AF439865DCB3E8B69 /* Pods_FoodPin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		743287A3D8FBFAAF5E7036BC /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
+		FD5AC0E639B92F197B60685C /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBFC9ECC761F3E9887EDCD4 /* Pods_FoodPin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				348A1F4A28005B9C00759C43 /* FoodPin */,
 				348A1F4928005B9C00759C43 /* Products */,
+				C2F06229296587A7D26DB935 /* Pods */,
+				941AF5444B0F4C489A67C065 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = FoodPin;
 			sourceTree = "<group>";
 		};
+		941AF5444B0F4C489A67C065 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BBE448AF439865DCB3E8B69 /* Pods_FoodPin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2F06229296587A7D26DB935 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD5AC0E639B92F197B60685C /* Pods-FoodPin.debug.xcconfig */,
+				743287A3D8FBFAAF5E7036BC /* Pods-FoodPin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 348A1F5C28005BA000759C43 /* Build configuration list for PBXNativeTarget "FoodPin" */;
 			buildPhases = (
+				1E69E4010D615085919787D5 /* [CP] Check Pods Manifest.lock */,
 				348A1F4428005B9C00759C43 /* Sources */,
 				348A1F4528005B9C00759C43 /* Frameworks */,
 				348A1F4628005B9C00759C43 /* Resources */,
+				34B4C096280D446600D3759C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E69E4010D615085919787D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodPin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34B4C096280D446600D3759C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		348A1F4428005B9C00759C43 /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		348A1F5D28005BA000759C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5AC0E639B92F197B60685C /* Pods-FoodPin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +383,7 @@
 		};
 		348A1F5E28005BA000759C43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743287A3D8FBFAAF5E7036BC /* Pods-FoodPin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

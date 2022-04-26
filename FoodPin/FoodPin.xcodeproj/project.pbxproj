@@ -16,6 +16,7 @@
 		348A1F6028005E8700759C43 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A1F5F28005E8700759C43 /* RestaurantTableViewController.swift */; };
 		34B4C098280E90E300D3759C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4C097280E90E300D3759C /* Restaurant.swift */; };
 		34B4C09F281028CF00D3759C /* RestaurantDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4C09E281028CF00D3759C /* RestaurantDiffableDataSource.swift */; };
+		34B4C0A32817DDC500D3759C /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4C0A22817DDC500D3759C /* RestaurantDetailViewController.swift */; };
 		34BF523C2806C9C3008DC13A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF523B2806C9C3008DC13A /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		348A1F5F28005E8700759C43 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		34B4C097280E90E300D3759C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		34B4C09E281028CF00D3759C /* RestaurantDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDiffableDataSource.swift; sourceTree = "<group>"; };
+		34B4C0A22817DDC500D3759C /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		34BF523B2806C9C3008DC13A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		3BBE448AF439865DCB3E8B69 /* Pods_FoodPin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743287A3D8FBFAAF5E7036BC /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				348A1F5F28005E8700759C43 /* RestaurantTableViewController.swift */,
+				34B4C0A22817DDC500D3759C /* RestaurantDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				348A1F4C28005B9C00759C43 /* AppDelegate.swift in Sources */,
 				348A1F4E28005B9C00759C43 /* SceneDelegate.swift in Sources */,
 				34B4C09F281028CF00D3759C /* RestaurantDiffableDataSource.swift in Sources */,
+				34B4C0A32817DDC500D3759C /* RestaurantDetailViewController.swift in Sources */,
 				348A1F6028005E8700759C43 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

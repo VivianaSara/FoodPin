@@ -13,20 +13,27 @@ struct Restaurant: Hashable {
     private var location: String
     private var image: String
     private var isFavorite: Bool
-    init(name: String, type: String, location: String, image: String, isFavorite: Bool) {
+    private var phone: String = ""
+    private var description: String = ""
+    init(name: String, type: String, location: String, phone: String,
+         description: String, image: String, isFavorite: Bool) {
         self.name = name
         self.type = type
         self.location = location
         self.image = image
         self.isFavorite = isFavorite
+        self.phone = phone
+        self.description = description
 }
     init() {
-        self.init(name: "", type: "", location: "", image: "", isFavorite: false) }
+        self.init(name: "", type: "", location: "", phone: "", description: "", image: "", isFavorite: false) }
 
     func getName() -> String { return self.name }
     func getType() -> String { return self.type }
     func getLocation() -> String { return self.location }
     func getImage() -> String { return self.image }
     func getIsFavorite() -> Bool { return self.isFavorite }
+    func getPhone() -> String { return self.phone }
+    func getDescrption() -> String { return self.description }
     mutating func setIsFavorite(isFavorite: Bool) { self.isFavorite = isFavorite }
 }

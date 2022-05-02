@@ -238,17 +238,48 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Custom the app title (Food Pin)
+        if let appearance = navigationController?.navigationBar.standardAppearance {
+            appearance.configureWithTransparentBackground()
+            if let customFont = UIFont(name: "Nunito-Bold", size: 45.0) {
+                appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!]
+                appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!,
+                                                       .font: customFont]
+            }
+
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
+
         // Large Title
         navigationController?.navigationBar.prefersLargeTitles = true
+
+        // Back button from DetailView to have no name juust the arrow
+        navigationItem.backButtonTitle = ""
 
         // IPad configure
         tableView.cellLayoutMarginsFollowReadableWidth = true
 
+        // Without separator in tableView
         tableView.separatorStyle = .none
+
+        // The cell has automatic diimension
+        tableView.rowHeight = UITableView.automaticDimension
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Restaurant>()
         snapshot.appendSections([.all])
         snapshot.appendItems(restaurants, toSection: .all)
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // To hide when scoll
+        navigationController?.hidesBarsOnSwipe = true
+
+        // Title to be large (not just in the begining )
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

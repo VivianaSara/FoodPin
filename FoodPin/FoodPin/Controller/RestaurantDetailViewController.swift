@@ -25,10 +25,25 @@ class RestaurantDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+
+        // Content not to be blocked by navig. bar (superview)
+        tableView.contentInsetAdjustmentBehavior = .never
     }
 
     func getRestaurat() -> Restaurant { return self.restaurant }
     func setRestaurat(restaurant: Restaurant) { self.restaurant = restaurant }
+
+    // For every appearence, not just for the first loaded
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDelegate {

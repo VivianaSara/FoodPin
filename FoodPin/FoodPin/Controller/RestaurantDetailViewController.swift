@@ -18,6 +18,7 @@ class RestaurantDetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.backButtonTitle = ""
 
         // Configure header view
         headerView.configure(restaurant: restaurant)
@@ -44,12 +45,22 @@ class RestaurantDetailViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            guard let destinationController = segue.destination as? MapViewController else {
+                return
+            }
+
+            destinationController.restaurant = restaurant
+        }
+    }
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +70,7 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
                 withIdentifier: String(describing: RestaurantDetailTextCell.self),
                 for: indexPath) as? RestaurantDetailTextCell else {
                 return UITableViewCell()
-        }
+            }
 
             cell.setDescriptionLabel(text: restaurant.getDescrption())
             return cell
@@ -73,6 +84,16 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
 
             cell.configure(address: "Address", fullAddress: restaurant.getLocation(),
                            phone: "Phone", phoneNumber: restaurant.getPhone())
+            tableView.deselectRow(at: indexPath, animated: false)
+            return cell
+
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self),
+                                                           for: indexPath) as? RestaurantDetailMapCell else {
+                return UITableViewCell()
+            }
+
+            cell.configure(location: restaurant.getLocation())
             return cell
 
         default:

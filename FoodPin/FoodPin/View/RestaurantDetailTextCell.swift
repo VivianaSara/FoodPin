@@ -11,4 +11,5 @@ class RestaurantDetailTextCell: UITableViewCell {
 
     @IBOutlet private var descriptionLabel: UILabel!
     func setDescriptionLabel(text: String) { self.descriptionLabel.text = text }
+
 }

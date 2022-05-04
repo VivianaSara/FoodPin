@@ -8,6 +8,24 @@
 import Foundation
 
 struct Restaurant: Hashable {
+    enum Rating: String {
+        case awesome
+        case good
+        case okay
+        case bad
+        case terrible
+
+        var image: String {
+            switch self {
+            case .awesome: return "love"
+            case .good: return "cool"
+            case .okay: return "happy"
+            case .bad: return "sad"
+            case .terrible: return "angry"
+            }
+        }
+    }
+
     private var name: String
     private var type: String
     private var location: String
@@ -15,6 +33,8 @@ struct Restaurant: Hashable {
     private var isFavorite: Bool
     private var phone: String = ""
     private var description: String = ""
+    private var rating: Rating?
+
     init(name: String, type: String, location: String, phone: String,
          description: String, image: String, isFavorite: Bool) {
         self.name = name
@@ -36,4 +56,5 @@ struct Restaurant: Hashable {
     func getPhone() -> String { return self.phone }
     func getDescrption() -> String { return self.description }
     mutating func setIsFavorite(isFavorite: Bool) { self.isFavorite = isFavorite }
+    mutating func setRating(rating: Rating) { self.rating = rating }
 }

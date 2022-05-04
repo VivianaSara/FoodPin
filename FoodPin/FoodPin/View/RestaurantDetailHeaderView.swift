@@ -28,6 +28,7 @@ class RestaurantDetailHeaderView: UIView {
     }
 
     @IBOutlet private var heartButton: UIButton!
+    @IBOutlet private var ratingImageView: UIImageView!
 
     func configure(restaurant: Restaurant) {
         self.headerImageView.image = UIImage(named: restaurant.getImage())
@@ -36,5 +37,14 @@ class RestaurantDetailHeaderView: UIView {
         let heartImage = restaurant.getIsFavorite() ? "heart.fill" : "heart"
         self.heartButton.tintColor = restaurant.getIsFavorite() ? .systemYellow : .white
         self.heartButton.setImage(UIImage(systemName: heartImage), for: .normal)
+    }
+
+    func setRatingImageView(imageRating: String) {
+        self.ratingImageView.image = UIImage(named: imageRating)
+    }
+
+    func setTransformAlpha(transform: CGAffineTransform, alpha: CGFloat) {
+        self.ratingImageView.transform = transform
+        self.ratingImageView.alpha = alpha
     }
 }

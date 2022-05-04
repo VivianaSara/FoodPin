@@ -47,13 +47,47 @@ class RestaurantDetailViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMap" {
+        switch segue.identifier {
+        case "showMap":
             guard let destinationController = segue.destination as? MapViewController else {
                 return
             }
 
             destinationController.restaurant = restaurant
+
+        case "showReview":
+            guard let destinationController = segue.destination as? ReviewViewController else {
+                    return
+            }
+
+            destinationController.setRestaurant(restaurant: restaurant)
+
+        default: break
         }
+    }
+
+    @IBAction func close(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
+        guard let identifier = segue.identifier else {
+            return
+        }
+
+        dismiss(animated: true, completion: {
+               if let rating = Restaurant.Rating(rawValue: identifier) {
+                   self.restaurant.setRating(rating: rating)
+                   self.headerView.setRatingImageView(imageRating: rating.image)
+               }
+
+               let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+               self.headerView.setTransformAlpha(transform: scaleTransform, alpha: 0)
+               UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3,
+                              initialSpringVelocity: 0.7, options: [], animations: {
+                   self.headerView.setTransformAlpha(transform: .identity, alpha: 1)
+               }, completion: nil)
+       })
     }
 }
 

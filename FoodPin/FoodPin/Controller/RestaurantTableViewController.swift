@@ -282,4 +282,8 @@ class RestaurantTableViewController: UITableViewController {
         // Title to be large (not just in the begining )
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
 }

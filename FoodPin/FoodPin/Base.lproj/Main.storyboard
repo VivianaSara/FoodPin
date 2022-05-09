@@ -203,8 +203,23 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="Cwc-hv-8pY" id="4Vt-Ic-afp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKO-Yw-fFP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="X8h-89-CXc">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptydata" translatesAutoresizingMaskIntoConstraints="NO" id="Cwc-hv-8pY">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="WzY-Fx-2OS"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="440.57971014492756" y="15.401785714285714"/>
         </scene>
@@ -256,17 +271,6 @@
                                                 <constraint firstAttribute="width" constant="50" id="xni-oc-TFo"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwg-64-3cj">
-                                            <rect key="frame" x="339.33333333333331" y="18" width="70.666666666666686" height="31"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="31" id="JT2-TK-FVt"/>
-                                            </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
-                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                            </buttonConfiguration>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -276,20 +280,16 @@
                                         <constraint firstAttribute="bottom" secondItem="bMP-6M-xeC" secondAttribute="bottom" id="GmI-b5-cpc"/>
                                         <constraint firstItem="MfI-8h-STb" firstAttribute="leading" secondItem="Tui-GA-96f" secondAttribute="leading" constant="20" id="KdP-a1-QU2"/>
                                         <constraint firstAttribute="trailing" secondItem="uea-LC-0FV" secondAttribute="trailing" id="Piu-Oe-1F8"/>
-                                        <constraint firstItem="kwg-64-3cj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tui-GA-96f" secondAttribute="leading" constant="20" symbolic="YES" id="QkL-q9-0d0"/>
                                         <constraint firstItem="uea-LC-0FV" firstAttribute="bottom" secondItem="bMP-6M-xeC" secondAttribute="bottom" id="Roz-Th-GLN"/>
                                         <constraint firstItem="uea-LC-0FV" firstAttribute="top" secondItem="Tui-GA-96f" secondAttribute="top" id="XXb-gY-zye"/>
                                         <constraint firstAttribute="trailing" secondItem="bMP-6M-xeC" secondAttribute="trailing" id="cJR-qF-S4y"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kwg-64-3cj" secondAttribute="trailing" constant="10" id="mkZ-hd-gZQ"/>
                                         <constraint firstItem="bMP-6M-xeC" firstAttribute="top" secondItem="Tui-GA-96f" secondAttribute="top" id="mrO-EP-H9O"/>
-                                        <constraint firstItem="kwg-64-3cj" firstAttribute="top" secondItem="Tui-GA-96f" secondAttribute="topMargin" constant="10" id="qeN-Tk-0ag"/>
                                         <constraint firstItem="MfI-8h-STb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tui-GA-96f" secondAttribute="top" constant="20" id="vd9-PX-k2r"/>
                                         <constraint firstItem="uea-LC-0FV" firstAttribute="leading" secondItem="Tui-GA-96f" secondAttribute="leading" id="y6g-Ii-gea"/>
                                         <constraint firstAttribute="trailing" secondItem="ftQ-Qt-ay3" secondAttribute="trailing" constant="20" id="zer-gw-5Yp"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerImageView" destination="bMP-6M-xeC" id="eC6-wG-GTa"/>
-                                        <outlet property="heartButton" destination="kwg-64-3cj" id="uyS-VP-49t"/>
                                         <outlet property="nameLabel" destination="fCm-S3-Wul" id="6qg-j5-x7B"/>
                                         <outlet property="ratingImageView" destination="ftQ-Qt-ay3" id="Otc-AX-Lkr"/>
                                         <outlet property="typeLabel" destination="0ux-Rq-k5Q" id="zX4-ng-hoj"/>
@@ -450,10 +450,26 @@
                             <constraint firstAttribute="trailing" secondItem="y5T-w8-8Zs" secondAttribute="trailing" id="hsJ-37-nii"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="clt-pI-w3n"/>
+                    <navigationItem key="navigationItem" id="clt-pI-w3n">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="edp-um-5lD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kwg-64-3cj">
+                                <rect key="frame" x="337.33333333333331" y="0.0" width="70.666666666666686" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="JT2-TK-FVt"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="428" height="1200"/>
                     <connections>
                         <outlet property="headerView" destination="Tui-GA-96f" id="ENe-Iy-A0t"/>
+                        <outlet property="heartButton" destination="kwg-64-3cj" id="W0g-gB-ske"/>
                         <outlet property="tableView" destination="y5T-w8-8Zs" id="YM7-pq-YbW"/>
                     </connections>
                 </viewController>
@@ -883,6 +899,7 @@
     <resources>
         <image name="angry" width="78" height="103"/>
         <image name="cool" width="78" height="83"/>
+        <image name="emptydata" width="1440" height="1024"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>

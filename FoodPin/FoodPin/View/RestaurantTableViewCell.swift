@@ -15,8 +15,8 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet private var heartImageView: UIImageView!
 
     func configureCell(nameLabel: String, locationLabel: String, typeLabel: String,
-                       thumbnailImageView: String) {
-        self.thumbnailImageView.image = UIImage(named: thumbnailImageView)
+                       thumbnailImageView: Data) {
+        self.thumbnailImageView.image = UIImage(data: thumbnailImageView)
         self.typeLabel.text = typeLabel
         self.locationLabel.text = locationLabel
         self.nameLabel.text = nameLabel

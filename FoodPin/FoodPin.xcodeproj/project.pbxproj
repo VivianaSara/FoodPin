@@ -31,6 +31,7 @@
 		34D1E3702822BDA800EE951D /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E36F2822BDA800EE951D /* ReviewViewController.swift */; };
 		34D1E37228244FDE00EE951D /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E37128244FDE00EE951D /* RoundedTextField.swift */; };
 		34D1E37428245A6700EE951D /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E37328245A6700EE951D /* NewRestaurantController.swift */; };
+		34D1E37E2828DDD800EE951D /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E37C2828DDD800EE951D /* FoodPin.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		34D1E36F2822BDA800EE951D /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		34D1E37128244FDE00EE951D /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		34D1E37328245A6700EE951D /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
+		34D1E37D2828DDD800EE951D /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		3BBE448AF439865DCB3E8B69 /* Pods_FoodPin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743287A3D8FBFAAF5E7036BC /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 		FD5AC0E639B92F197B60685C /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				348A1F5428005B9F00759C43 /* Assets.xcassets */,
 				348A1F5628005B9F00759C43 /* LaunchScreen.storyboard */,
 				348A1F5928005B9F00759C43 /* Info.plist */,
+				34D1E37C2828DDD800EE951D /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				34B4C0B72819894100D3759C /* RestaurantDetailHeaderView.swift in Sources */,
 				348A1F6028005E8700759C43 /* RestaurantTableViewController.swift in Sources */,
 				34D1E36A28218C6C00EE951D /* MapViewController.swift in Sources */,
+				34D1E37E2828DDD800EE951D /* FoodPin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +547,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34D1E37C2828DDD800EE951D /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34D1E37D2828DDD800EE951D /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = 34D1E37D2828DDD800EE951D /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 348A1F4028005B9C00759C43 /* Project object */;
 }

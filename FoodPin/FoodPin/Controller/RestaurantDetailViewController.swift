@@ -11,6 +11,7 @@ class RestaurantDetailViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var headerView: RestaurantDetailHeaderView!
+    @IBOutlet private var heartButton: UIButton!
 
     private var restaurant: Restaurant = Restaurant.init()
 
@@ -29,6 +30,14 @@ class RestaurantDetailViewController: UIViewController {
 
         // Content not to be blocked by navig. bar (superview)
         tableView.contentInsetAdjustmentBehavior = .never
+
+        if let rating = restaurant.rating {
+            headerView.setRatingImageView(imageRating: rating.image)
+        }
+
+        let heartImage = restaurant.getIsFavorite() ? "heart.fill" : "heart"
+        self.heartButton.tintColor = restaurant.getIsFavorite() ? .systemYellow : .white
+        self.heartButton.setImage(UIImage(systemName: heartImage), for: .normal)
     }
 
     func getRestaurat() -> Restaurant { return self.restaurant }
@@ -76,16 +85,20 @@ class RestaurantDetailViewController: UIViewController {
         }
 
         dismiss(animated: true, completion: {
-               if let rating = Restaurant.Rating(rawValue: identifier) {
-                   self.restaurant.setRating(rating: rating)
+            if let rating = Restaurant.Rating(rawValue: identifier) {
+                   self.restaurant.rating = rating
                    self.headerView.setRatingImageView(imageRating: rating.image)
-               }
 
-               let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
-               self.headerView.setTransformAlpha(transform: scaleTransform, alpha: 0)
-               UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3,
-                              initialSpringVelocity: 0.7, options: [], animations: {
-                   self.headerView.setTransformAlpha(transform: .identity, alpha: 1)
+                   if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                       appDelegate.saveContext()
+                   }
+                }
+
+            let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+            self.headerView.setTransformAlpha(transform: scaleTransform, alpha: 0)
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3,
+                           initialSpringVelocity: 0.7, options: [], animations: {
+                self.headerView.setTransformAlpha(transform: .identity, alpha: 1)
                }, completion: nil)
        })
     }
@@ -106,7 +119,7 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
                 return UITableViewCell()
             }
 
-            cell.setDescriptionLabel(text: restaurant.getDescrption())
+            cell.setDescriptionLabel(text: restaurant.getDescription())
             return cell
 
         case 1:

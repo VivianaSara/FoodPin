@@ -21,6 +21,7 @@ class NewRestaurantController: UITableViewController {
     @IBOutlet private var phoneTextField: RoundedTextField!
     @IBOutlet private var descriptionTextView: UITextView!
     @IBOutlet private var photoImageView: UIImageView!
+    private var restaurant: Restaurant!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,9 +75,9 @@ class NewRestaurantController: UITableViewController {
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (_) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
-                    imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .camera
+                    imagePicker.delegate = self
                     self.present(imagePicker, animated: true, completion: nil)
                 }
             })
@@ -117,11 +118,18 @@ class NewRestaurantController: UITableViewController {
             allFieldRequired.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             present(allFieldRequired, animated: true, completion: nil)
         } else {
-            print("Name:  \(nameTextField.text ?? "")")
-            print("Type:  \(typeTextField.text ?? "")")
-            print("Location:  \(addressTextField.text ?? "")")
-            print("Phone:  \(phoneTextField.text ?? "")")
-            print("Description:  \(descriptionTextView.text ?? "")")
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = Restaurant(context: appDelegate.persistentContainer.viewContext)
+                restaurant.configure(name: nameTextField.text!, type: typeTextField.text!,
+                                     description: descriptionTextView.text, location: addressTextField.text!,
+                                     phone: phoneTextField.text!, isFavorite: false)
+                if let imageData = photoImageView.image?.pngData() {
+                    restaurant.setImage(imageView: imageData)
+            }
+
+                print("Saving data to context...")
+                appDelegate.saveContext()
+            }
 
             // After thee restaurant is added close the view
             dismiss(animated: true, completion: nil)

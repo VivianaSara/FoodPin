@@ -33,7 +33,6 @@ class RestaurantDetailHeaderView: UIView {
         self.headerImageView.image = UIImage(data: restaurant.getImage())
         self.typeLabel.text = restaurant.getType()
         self.nameLabel.text = restaurant.getName()
-        //self.ratingImageView.image = UIImage(named: restaurant.rating!.rawValue)
     }
 
     func setRatingImageView(imageRating: String) {

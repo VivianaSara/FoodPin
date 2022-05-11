@@ -202,6 +202,9 @@ class RestaurantTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search restaurants..."
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(named: "NavigationBarTitle")
+
+        // To appear wallkthrough at every running
+        UserDefaults.standard.set(false, forKey: "hasViewedWalkthrough")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -212,6 +215,17 @@ class RestaurantTableViewController: UITableViewController {
 
         // Title to be large (not just in the begining )
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
     }
 
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {

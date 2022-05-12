@@ -29,6 +29,8 @@
 		34C922CB282BF046005F93BA /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C922CA282BF046005F93BA /* WalkthroughContentViewController.swift */; };
 		34C922CD282BF074005F93BA /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C922CC282BF074005F93BA /* WalkthroughPageViewController.swift */; };
 		34C922CF282BF0A4005F93BA /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C922CE282BF0A4005F93BA /* WalkthroughViewController.swift */; };
+		34C922DC282DAB03005F93BA /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C922DA282DAB03005F93BA /* About.storyboard */; };
+		34C922DF282DAD25005F93BA /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C922DD282DAD25005F93BA /* Discover.storyboard */; };
 		34D1E366282179D700EE951D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D1E365282179D700EE951D /* MapKit.framework */; };
 		34D1E36828217AC100EE951D /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E36728217AC100EE951D /* RestaurantDetailMapCell.swift */; };
 		34D1E36A28218C6C00EE951D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E36928218C6C00EE951D /* MapViewController.swift */; };
@@ -62,6 +64,8 @@
 		34C922CA282BF046005F93BA /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		34C922CC282BF074005F93BA /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		34C922CE282BF0A4005F93BA /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		34C922DB282DAB03005F93BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		34C922DE282DAD25005F93BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		34D1E365282179D700EE951D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34D1E36728217AC100EE951D /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		34D1E36928218C6C00EE951D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 		34C922C7282BEF9F005F93BA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				34C922DD282DAD25005F93BA /* Discover.storyboard */,
+				34C922DA282DAB03005F93BA /* About.storyboard */,
 				34C922C8282BF00A005F93BA /* Onboarding.storyboard */,
 				348A1F5628005B9F00759C43 /* LaunchScreen.storyboard */,
 				348A1F5128005B9C00759C43 /* Main.storyboard */,
@@ -275,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				348A1F5828005B9F00759C43 /* LaunchScreen.storyboard in Resources */,
+				34C922DF282DAD25005F93BA /* Discover.storyboard in Resources */,
+				34C922DC282DAB03005F93BA /* About.storyboard in Resources */,
 				34B4C0B5281985C300D3759C /* Nunito-Bold.ttf in Resources */,
 				348A1F5528005B9F00759C43 /* Assets.xcassets in Resources */,
 				34C922C9282BF00A005F93BA /* Onboarding.storyboard in Resources */,
@@ -374,6 +382,22 @@
 				348A1F5728005B9F00759C43 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		34C922DA282DAB03005F93BA /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C922DB282DAB03005F93BA /* Base */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
+		34C922DD282DAD25005F93BA /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C922DE282DAD25005F93BA /* Base */,
+			);
+			name = Discover.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

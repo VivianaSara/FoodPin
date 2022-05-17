@@ -1,0 +1,129 @@
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant name"; ObjectID = "0dd-re-8I2"; */
+"0dd-re-8I2.placeholder" = "請填寫餐廳名";
+
+/* Class = "UIButton"; configuration.title = "Rate it"; ObjectID = "0iO-1u-FgA"; */
+"0iO-1u-FgA.configuration.title" = "給餐廳評價";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0iO-1u-FgA"; */
+"0iO-1u-FgA.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Breakfast & Brunch"; ObjectID = "0ux-Rq-k5Q"; */
+"0ux-Rq-k5Q.text" = "Breakfast & Brunch";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "1Uo-WS-Xw3"; */
+"1Uo-WS-Xw3.text" = "電話號碼";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "1xT-ey-nrv"; */
+"1xT-ey-nrv.text" = "地址";
+
+/* Class = "UINavigationItem"; title = "New Restaurant "; ObjectID = "3CL-Vu-PTp"; */
+"3CL-Vu-PTp.title" = "新增餐廳 ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "B5n-Pw-j9q"; */
+"B5n-Pw-j9q.text" = "餐廳名";
+
+/* Class = "UIButton"; configuration.title = "Awesome"; ObjectID = "EGi-aN-Lwz"; */
+"EGi-aN-Lwz.configuration.title" = "Awesome";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EGi-aN-Lwz"; */
+"EGi-aN-Lwz.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "A great restaurant to try out."; ObjectID = "EHH-TY-Uc2"; */
+"EHH-TY-Uc2.text" = "非常棒的餐廳!不可錯過";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "G9y-Ns-ydT"; */
+"G9y-Ns-ydT.text" = "類別";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "Jxr-Md-zkb"; */
+"Jxr-Md-zkb.text" = "電話號碼";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "P29-o9-Fft"; */
+"P29-o9-Fft.text" = "餐廳名";
+
+/* Class = "UILabel"; text = "Full Address"; ObjectID = "R3j-Xi-DAI"; */
+"R3j-Xi-DAI.text" = "餐廳地址";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "UMy-nc-ILZ"; */
+"UMy-nc-ILZ.title" = "Item";
+
+/* Class = "UIButton"; configuration.title = "Bad"; ObjectID = "Wjc-mE-bsN"; */
+"Wjc-mE-bsN.configuration.title" = "Bad";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wjc-mE-bsN"; */
+"Wjc-mE-bsN.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Wtm-8v-1m0"; */
+"Wtm-8v-1m0.title" = "儲存";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "XWS-Xj-Ibe"; */
+"XWS-Xj-Ibe.title" = "Item";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Y8H-Ll-oAB"; */
+"Y8H-Ll-oAB.text" = "簡介";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant type"; ObjectID = "bbb-PL-EWB"; */
+"bbb-PL-EWB.placeholder" = "請填寫餐廳類別";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "efZ-0X-98b"; */
+"efZ-0X-98b.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "ez2-pR-DvH"; */
+"ez2-pR-DvH.text" = "電話號碼";
+
+/* Class = "UILabel"; text = "Graham Avenue Meats"; ObjectID = "fCm-S3-Wul"; */
+"fCm-S3-Wul.text" = "Graham Avenue Meats";
+
+/* Class = "UIButton"; configuration.title = "Good"; ObjectID = "hDt-9t-M0h"; */
+"hDt-9t-M0h.configuration.title" = "Good";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hDt-9t-M0h"; */
+"hDt-9t-M0h.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "ADDRESS"; ObjectID = "hND-wb-5u3"; */
+"hND-wb-5u3.text" = "地址";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant address"; ObjectID = "k3X-vc-BfE"; */
+"k3X-vc-BfE.placeholder" = "請填寫餐廳地址";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kwg-64-3cj"; */
+"kwg-64-3cj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "loj-TB-ffv"; */
+"loj-TB-ffv.text" = "地址";
+
+/* Class = "UIButton"; configuration.title = "Okay"; ObjectID = "mMD-SZ-AiQ"; */
+"mMD-SZ-AiQ.configuration.title" = "確定";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mMD-SZ-AiQ"; */
+"mMD-SZ-AiQ.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant phone"; ObjectID = "oTn-6b-DMB"; */
+"oTn-6b-DMB.placeholder" = "請填寫餐廳電話號碼";
+
+/* Class = "UINavigationItem"; title = "FoodPin"; ObjectID = "qSg-zA-Y2M"; */
+"qSg-zA-Y2M.title" = "FoodPin";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "rYZ-Jd-8ka"; */
+"rYZ-Jd-8ka.text" = "地址";
+
+/* Class = "UIButton"; configuration.title = "Terrible"; ObjectID = "rdD-IU-zTO"; */
+"rdD-IU-zTO.configuration.title" = "Terrible";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rdD-IU-zTO"; */
+"rdD-IU-zTO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "TYPE"; ObjectID = "xD4-Xv-dFB"; */
+"xD4-Xv-dFB.text" = "類別";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "yCJ-r0-i54"; */
+"yCJ-r0-i54.text" = "電話號碼";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "yuZ-2c-sHh"; */
+"yuZ-2c-sHh.title" = "不可不試";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "zgO-gR-h6S"; */
+"zgO-gR-h6S.text" = "類別";
+
+/* Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "ztQ-oa-Bqb"; */
+"ztQ-oa-Bqb.text" = "簡介";

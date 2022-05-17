@@ -33,6 +33,8 @@
 		34C922DF282DAD25005F93BA /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C922DD282DAD25005F93BA /* Discover.storyboard */; };
 		34C922E92832438B005F93BA /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C922E82832438B005F93BA /* AboutTableViewController.swift */; };
 		34C922EB283243B6005F93BA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C922EA283243B6005F93BA /* WebViewController.swift */; };
+		34C922FA283436A7005F93BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34C922F8283436A7005F93BA /* InfoPlist.strings */; };
+		34C922FD283436A7005F93BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34C922FB283436A7005F93BA /* Localizable.strings */; };
 		34D1E366282179D700EE951D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D1E365282179D700EE951D /* MapKit.framework */; };
 		34D1E36828217AC100EE951D /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E36728217AC100EE951D /* RestaurantDetailMapCell.swift */; };
 		34D1E36A28218C6C00EE951D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D1E36928218C6C00EE951D /* MapViewController.swift */; };
@@ -70,6 +72,18 @@
 		34C922DE282DAD25005F93BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		34C922E82832438B005F93BA /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		34C922EA283243B6005F93BA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		34C922F02833F643005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Discover.strings"; sourceTree = "<group>"; };
+		34C922F12833F645005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/About.strings"; sourceTree = "<group>"; };
+		34C922F22833F646005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		34C922F32833F647005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		34C922F42833FBC0005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Discover.strings; sourceTree = "<group>"; };
+		34C922F52833FBC0005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/About.strings; sourceTree = "<group>"; };
+		34C922F62833FBC1005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		34C922F72833FBC1005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		34C922F9283436A7005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		34C922FC283436A7005F93BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		34C922FE283436C0005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34C922FF283436C0005F93BA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34D1E365282179D700EE951D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34D1E36728217AC100EE951D /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		34D1E36928218C6C00EE951D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +148,8 @@
 				348A1F4D28005B9C00759C43 /* SceneDelegate.swift */,
 				348A1F5428005B9F00759C43 /* Assets.xcassets */,
 				348A1F5928005B9F00759C43 /* Info.plist */,
+				34C922FB283436A7005F93BA /* Localizable.strings */,
+				34C922F8283436A7005F93BA /* InfoPlist.strings */,
 				34D1E37C2828DDD800EE951D /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
@@ -270,6 +286,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				de,
 			);
 			mainGroup = 348A1F3F28005B9C00759C43;
 			productRefGroup = 348A1F4928005B9C00759C43 /* Products */;
@@ -291,8 +309,10 @@
 				34C922DC282DAB03005F93BA /* About.storyboard in Resources */,
 				34B4C0B5281985C300D3759C /* Nunito-Bold.ttf in Resources */,
 				348A1F5528005B9F00759C43 /* Assets.xcassets in Resources */,
+				34C922FD283436A7005F93BA /* Localizable.strings in Resources */,
 				34C922C9282BF00A005F93BA /* Onboarding.storyboard in Resources */,
 				34B4C0B3281985B700D3759C /* Nunito-Regular.ttf in Resources */,
+				34C922FA283436A7005F93BA /* InfoPlist.strings in Resources */,
 				348A1F5328005B9C00759C43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +400,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				348A1F5228005B9C00759C43 /* Base */,
+				34C922F32833F647005F93BA /* zh-Hant */,
+				34C922F72833FBC1005F93BA /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -388,6 +410,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				348A1F5728005B9F00759C43 /* Base */,
+				34C922F22833F646005F93BA /* zh-Hant */,
+				34C922F62833FBC1005F93BA /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -396,6 +420,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				34C922DB282DAB03005F93BA /* Base */,
+				34C922F12833F645005F93BA /* zh-Hant */,
+				34C922F52833FBC0005F93BA /* de */,
 			);
 			name = About.storyboard;
 			sourceTree = "<group>";
@@ -404,8 +430,28 @@
 			isa = PBXVariantGroup;
 			children = (
 				34C922DE282DAD25005F93BA /* Base */,
+				34C922F02833F643005F93BA /* zh-Hant */,
+				34C922F42833FBC0005F93BA /* de */,
 			);
 			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
+		34C922F8283436A7005F93BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C922F9283436A7005F93BA /* zh-Hant */,
+				34C922FE283436C0005F93BA /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		34C922FB283436A7005F93BA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C922FC283436A7005F93BA /* zh-Hant */,
+				34C922FF283436C0005F93BA /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -415,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -475,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

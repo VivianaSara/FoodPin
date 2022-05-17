@@ -15,11 +15,13 @@ class WalkthroughPageViewController: UIPageViewController {
 
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
 
-    private var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
+    private var pageHeadings = [String(localized: "CREATE YOUR OWN FOOD GUIDE"),
+                                String(localized: "SHOW YOU THE LOCATION"),
+                                String(localized: "DISCOVER GREAT RESTAURANTS")]
     private var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
-    private var pageSubHeadings = ["Pin your favorite restaurants and create your own food guide",
-                                   "Search and locate your favourite restaurant on Maps",
-                                   "Find restaurants shared by your friends and other foodies"]
+    private var pageSubHeadings = [String(localized: "Pin your favorite restaurants and create your own food guide"),
+                                   String(localized: "Search and locate your favourite restaurant on Maps"),
+                                   String(localized: "Find restaurants shared by your friends and other foodies")]
     private var currentIndex = 0
 
     func getCurrentIndex() -> Int { return self.currentIndex }

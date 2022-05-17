@@ -9,8 +9,17 @@ import UIKit
 class WalkthroughViewController: UIViewController {
 
     @IBOutlet private var pageControl: UIPageControl!
-    @IBOutlet private var nextButton: UIButton!
-    @IBOutlet private var skipButton: UIButton!
+    @IBOutlet private var nextButton: UIButton! {
+        didSet {
+            nextButton.setTitle(String(localized: "Skip"), for: .normal)
+        }
+    }
+
+    @IBOutlet private var skipButton: UIButton! {
+        didSet {
+            skipButton.setTitle(String(localized: "Skip"), for: .normal)
+        }
+    }
 
     private var walkthroughPageViewController: WalkthroughPageViewController?
 
@@ -50,10 +59,10 @@ class WalkthroughViewController: UIViewController {
         if let index = walkthroughPageViewController?.getCurrentIndex() {
             switch index {
             case 0...1:
-                nextButton.setTitle("NEXT", for: .normal)
+                nextButton.setTitle(String(localized: "NEXT"), for: .normal)
                 skipButton.isHidden = false
             case 2:
-                nextButton.setTitle("GET STARTED", for: .normal)
+                nextButton.setTitle(String(localized: "GET STARTED"), for: .normal)
                 skipButton.isHidden = true
             default: break
             }

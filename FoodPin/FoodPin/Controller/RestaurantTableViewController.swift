@@ -56,7 +56,7 @@ class RestaurantTableViewController: UITableViewController {
 
         // Delete action
         let deleteAction = UIContextualAction(style: .destructive,
-                                              title: "Delete") { (_, _, completionHandler) in
+                                              title: String(localized: "Delete", comment: "Delete")) { (_, _, completionHandler) in
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
 
@@ -74,7 +74,7 @@ class RestaurantTableViewController: UITableViewController {
 
         // Share action
         let shareAction = UIContextualAction(style: .normal,
-                                             title: "Share") {(_, _, completionHandler) in
+                                             title: String(localized: "Share", comment: "Share")) {(_, _, completionHandler) in
             let defaultText = "Just checking in at " + restaurant.getName()
 
             let activityController: UIActivityViewController
@@ -199,7 +199,7 @@ class RestaurantTableViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.placeholder = String(localized: "Search restaurants...", comment: "Search restaurants...")
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(named: "NavigationBarTitle")
 

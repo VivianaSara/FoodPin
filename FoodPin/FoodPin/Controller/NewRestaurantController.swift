@@ -70,9 +70,10 @@ class NewRestaurantController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source",
+            let photoSourceRequestController = UIAlertController(title: "",
+                                                                 message: String(localized: "Choose your photo source", comment: "Choose your photo source"),
                                                                  preferredStyle: .actionSheet)
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (_) in
+            let cameraAction = UIAlertAction(title: String(localized: "Camera", comment: "Camera"), style: .default, handler: { (_) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = false
@@ -82,7 +83,8 @@ class NewRestaurantController: UITableViewController {
                 }
             })
 
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default,
+            let photoLibraryAction = UIAlertAction(title: String(localized: "Photo library", comment: "Photo library"),
+                                                   style: .default,
                                                    handler: { (_) in
 
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -112,10 +114,11 @@ class NewRestaurantController: UITableViewController {
     @IBAction func saveButtonTapped(sender: UIButton ) {
         if nameTextField.text == "" || typeTextField.text == "" || phoneTextField.text == "" ||
             descriptionTextView.text == "" || addressTextField.text == "" {
-            let allFieldRequired = UIAlertController(title: "Oops",
-                                                     message: "We can't proceed because one of the field is blank. Please note that  all fields are required",
+            let allFieldRequired = UIAlertController(title: String(localized: "Oops"),
+                                                     message: String(localized: "We can't proceed because one of the field is blank. Please note that  all fields are required",
+                                                                     comment: "We can't proceed because one of the field is blank. Please note that  all fields are required"),
                                                      preferredStyle: .alert)
-            allFieldRequired.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            allFieldRequired.addAction(UIAlertAction(title: String(localized: "Ok", comment: "Ok"), style: .cancel, handler: nil))
             present(allFieldRequired, animated: true, completion: nil)
         } else {
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
@@ -127,7 +130,7 @@ class NewRestaurantController: UITableViewController {
                     restaurant.setImage(imageView: imageData)
             }
 
-                print("Saving data to context...")
+                print(String(localized: "Saving data to context...", comment: "Saving data to context..."))
                 appDelegate.saveContext()
             }
 

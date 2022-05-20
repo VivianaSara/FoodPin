@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Show Favorites</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.appcoda.ShowFavorites</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Show Favorites</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Discover a Restaurant</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.appcoda.DiscoverRestaurants</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Discover restaurants</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Create a new Restaurant</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.appcoda.NewRestaurant</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Restaurant</string>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>

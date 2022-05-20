@@ -226,7 +226,7 @@
         <!--Restaurant Detail View Controller-->
         <scene sceneID="rME-RU-sTv">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="G94-P6-bVa" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RestaurantDetailViewController" hidesBottomBarWhenPushed="YES" id="G94-P6-bVa" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iP1-GG-QdX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

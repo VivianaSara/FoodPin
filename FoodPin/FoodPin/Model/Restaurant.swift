@@ -32,6 +32,7 @@ public class Restaurant: NSManagedObject {
     func setRating(rating: String) { self.ratingText = rating }
     func getIsFavorite() -> Bool { return self.isFavorite }
     func setIsFavorite(isFavorite: Bool) { self.isFavorite = isFavorite }
+    func setFavorite() { self.isFavorite.toggle() }
     func getImage() -> Data { return self.image }
     func setImage(imageView: Data) { self.image = imageView  }
 

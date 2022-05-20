@@ -271,6 +271,86 @@ class RestaurantTableViewController: UITableViewController {
         dataSource.apply(snapshot, animatingDifferences: animatingChange)
         tableView.backgroundView?.isHidden = restaurants.count == 0 ? false :true
     }
+
+    // MARK: - Building a Context Menu with Action Items
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        // Get the selected restaurant
+        guard let restaurant = self.dataSource.itemIdentifier(for: indexPath) else {
+            return nil
+        }
+
+        let configuration = UIContextMenuConfiguration(identifier: indexPath.row as NSCopying, previewProvider: {
+            guard let restaurantDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController else {
+                return nil
+            }
+
+            restaurantDetailViewController.setRestaurat(restaurant: restaurant)
+            return restaurantDetailViewController
+        }) { _ in
+
+            let favorite = self.restaurants[indexPath.row].getIsFavorite() ? "Remove from favorites" : "Save as favrite"
+            let imageFavorite = self.restaurants[indexPath.row].getIsFavorite() ? "heart.slash" : "heart"
+            let favoriteAction = UIAction(title: favorite, image: UIImage(systemName: imageFavorite)) { _ in
+                guard let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell else {
+                    return
+                }
+
+                self.restaurants[indexPath.row].setFavorite()
+                cell.setHeartImage(isFavorite: !self.restaurants[indexPath.row].getIsFavorite())
+            }
+
+            let shareAction = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                let defaultText = NSLocalizedString("Just checking in at ",
+                                                    comment: "Just checking in at") + self.restaurants[indexPath.row].getName()
+                let activityController: UIActivityViewController
+                if let imageToShare = UIImage(data: restaurant.getImage() as Data) {
+                    activityController = UIActivityViewController(activityItems: [defaultText, imageToShare],
+                                                                  applicationActivities: nil)
+                } else {
+                    activityController = UIActivityViewController(activityItems: [defaultText],
+                                                                  applicationActivities: nil)
+                }
+
+                self.present(activityController, animated: true, completion: nil)
+            }
+
+            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"),
+                                        attributes: .destructive) { _ in
+
+                // Delete the row from the data store
+                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                    let context = appDelegate.persistentContainer.viewContext
+                    let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+                    context.delete(restaurantToDelete)
+                    appDelegate.saveContext()
+                }
+            }
+
+            // Create and return a UIMenu with the share action
+            return UIMenu(title: "", children: [favoriteAction, shareAction, deleteAction])
+        }
+
+        return configuration
+    }
+
+    override func tableView(_ tableView: UITableView,
+                            willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration,
+                            animator: UIContextMenuInteractionCommitAnimating) {
+        guard let selectedRow = configuration.identifier as? Int else {
+            print("Failed to retrieve the row number")
+            return
+        }
+
+        guard let restaurantDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController else {
+            return
+        }
+
+        restaurantDetailViewController.setRestaurat(restaurant: self.restaurants[selectedRow])
+        animator.preferredCommitStyle = .pop
+        animator.addCompletion {
+            self.show(restaurantDetailViewController, sender: self)
+        }
+    }
 }
 
 extension RestaurantTableViewController: NSFetchedResultsControllerDelegate {

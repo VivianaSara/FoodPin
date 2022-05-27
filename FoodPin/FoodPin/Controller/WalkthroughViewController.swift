@@ -11,7 +11,7 @@ class WalkthroughViewController: UIViewController {
     @IBOutlet private var pageControl: UIPageControl!
     @IBOutlet private var nextButton: UIButton! {
         didSet {
-            nextButton.setTitle(String(localized: "Skip"), for: .normal)
+            nextButton.setTitle(String(localized: "Next"), for: .normal)
         }
     }
 
